@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>Day</string>
+		<key>bg</key>
+		<string>FFFFFF</string>
+		<key>result</key>
+		<string>EFEFF4</string>
+		<key>numbers</key>
+		<string>EFEFF4</string>
+		<key>operators</key>
+		<string>FFC050CC</string>
+		<key>actions</key>
+		<string>FF372780</string>
+		<key>historyText</key>
+		<string>000000</string>
+		<key>buttonText</key>
+		<string>000000</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Night</string>
+		<key>bg</key>
+		<string>000000</string>
+		<key>result</key>
+		<string>555555</string>
+		<key>numbers</key>
+		<string>555555</string>
+		<key>operators</key>
+		<string>FFC05099</string>
+		<key>actions</key>
+		<string>FF372799</string>
+		<key>historyText</key>
+		<string>FFFFFF</string>
+		<key>buttonText</key>
+		<string>FFFFFF</string>
+	</dict>
+</array>
+</plist>

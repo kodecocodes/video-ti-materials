@@ -1,0 +1,1505 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="H1p-Uh-vWS">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Courier.ttc">
+            <string>Courier</string>
+        </array>
+        <array key="Didot.ttc">
+            <string>Didot</string>
+        </array>
+        <array key="Futura.ttc">
+            <string>Futura-Medium</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Master-->
+        <scene sceneID="pY4-Hu-kfo">
+            <objects>
+                <navigationController title="Master" id="RMx-3f-FxP" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Pmd-2v-anx">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="7bK-jq-Zjz" kind="relationship" relationship="rootViewController" id="tsl-Nk-0bq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8fS-aE-onr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-38" y="-630"/>
+        </scene>
+        <!--Split View Controller-->
+        <scene sceneID="Nki-YV-4Qg">
+            <objects>
+                <splitViewController id="H1p-Uh-vWS" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <connections>
+                        <segue destination="RMx-3f-FxP" kind="relationship" relationship="masterViewController" id="BlO-5A-QYV"/>
+                        <segue destination="vC3-pB-5Vb" kind="relationship" relationship="detailViewController" id="Tll-UG-LXB"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cZU-Oi-B1e" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-856" y="-330"/>
+        </scene>
+        <!--Master-->
+        <scene sceneID="smW-Zh-WAh">
+            <objects>
+                <tableViewController title="Master" clearsSelectionOnViewWillAppear="NO" id="7bK-jq-Zjz" customClass="MenuViewController" customModule="DogYears" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="76" estimatedRowHeight="76" sectionHeaderHeight="18" sectionFooterHeight="18" id="r7i-6Z-zg0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MenuCell" rowHeight="76" id="WCw-Qf-5nD" customClass="MenuCell" customModule="DogYears" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="55.5" width="375" height="76"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WCw-Qf-5nD" id="37f-cq-3Eg">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="76"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yjq-2v-r61">
+                                            <rect key="frame" x="8" y="8" width="359" height="60"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fzv-7S-Oki">
+                                                    <rect key="frame" x="8" y="8" width="44" height="44"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="44" id="3OO-y8-mGq"/>
+                                                        <constraint firstAttribute="width" constant="44" id="hka-dn-bJO"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2N8-Es-fZ7">
+                                                    <rect key="frame" x="60" y="19" width="291" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.21760239035099063" green="0.65744882863490672" blue="0.91761934757232666" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <constraints>
+                                                <constraint firstItem="Fzv-7S-Oki" firstAttribute="top" secondItem="yjq-2v-r61" secondAttribute="top" constant="8" id="2dW-h4-BHy"/>
+                                                <constraint firstItem="Fzv-7S-Oki" firstAttribute="leading" secondItem="yjq-2v-r61" secondAttribute="leading" constant="8" id="FIV-of-rmH"/>
+                                                <constraint firstAttribute="trailing" secondItem="2N8-Es-fZ7" secondAttribute="trailing" constant="8" id="NUC-P9-U5C"/>
+                                                <constraint firstItem="2N8-Es-fZ7" firstAttribute="centerY" secondItem="yjq-2v-r61" secondAttribute="centerY" id="Wvi-fd-xPp"/>
+                                                <constraint firstItem="2N8-Es-fZ7" firstAttribute="leading" secondItem="Fzv-7S-Oki" secondAttribute="trailing" constant="8" id="ft6-sg-4Ag"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="yjq-2v-r61" secondAttribute="trailing" constant="8" id="GtN-cj-3u8"/>
+                                        <constraint firstItem="yjq-2v-r61" firstAttribute="top" secondItem="37f-cq-3Eg" secondAttribute="top" constant="8" id="MJ1-v0-8YC"/>
+                                        <constraint firstAttribute="bottom" secondItem="yjq-2v-r61" secondAttribute="bottom" constant="8" id="irv-aP-fxj"/>
+                                        <constraint firstItem="yjq-2v-r61" firstAttribute="leading" secondItem="37f-cq-3Eg" secondAttribute="leading" constant="8" id="m31-Sd-7x6"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="imgIcon" destination="Fzv-7S-Oki" id="KeH-RF-vQR"/>
+                                    <outlet property="lblTitle" destination="2N8-Es-fZ7" id="PT6-Hh-aYa"/>
+                                    <outlet property="vwBG" destination="yjq-2v-r61" id="8V3-Ne-38X"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="7bK-jq-Zjz" id="Gho-Na-rnu"/>
+                            <outlet property="delegate" destination="7bK-jq-Zjz" id="RA6-mI-bju"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Menu" id="Zdf-7t-Un8"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rux-fX-hf1" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="708" y="-630.13493253373315"/>
+        </scene>
+        <!--Information-->
+        <scene sceneID="Vyb-Tb-E1O">
+            <objects>
+                <viewController storyboardIdentifier="InformationView" id="43e-78-LHs" customClass="InfoViewController" customModule="DogYears" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9zl-wT-7Gd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EGw-M8-gSW">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="  Please wait, loading content ....">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="EGw-M8-gSW" firstAttribute="trailing" secondItem="ikj-UT-maM" secondAttribute="trailing" id="EFT-Xx-hlD"/>
+                            <constraint firstItem="EGw-M8-gSW" firstAttribute="bottom" secondItem="ikj-UT-maM" secondAttribute="bottom" id="Fio-8G-HDq"/>
+                            <constraint firstItem="EGw-M8-gSW" firstAttribute="leading" secondItem="ikj-UT-maM" secondAttribute="leading" id="Hin-RD-H5F"/>
+                            <constraint firstItem="EGw-M8-gSW" firstAttribute="top" secondItem="ikj-UT-maM" secondAttribute="top" id="z53-iA-TAG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ikj-UT-maM"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Information" id="zIa-Mp-g2C"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="txtInfo" destination="EGw-M8-gSW" id="NEZ-a8-iBC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="49E-fC-h4N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1501.5999999999999" y="126.38680659670166"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="Ib3-Wy-GeG">
+            <objects>
+                <viewController storyboardIdentifier="SettingsView" id="XQK-9U-3Tj" customClass="SettingsViewController" customModule="DogYears" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ssm-lX-c1u">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select the color scheme for your calculator:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3XJ-sk-rNV">
+                                <rect key="frame" x="16" y="80" width="343" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="MNn-YL-ltp">
+                                <rect key="frame" x="0.0" y="115.5" width="375" height="551.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="7KQ-UT-5N2">
+                                    <size key="itemSize" width="180" height="270"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ThemeCell" id="C17-wt-Hao" customClass="ThemeCell" customModule="DogYears" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="180" height="270"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="180" height="270"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SFX-n1-DuT">
+                                                    <rect key="frame" x="8" y="7.5" width="164" height="233"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Goz-mJ-16a" customClass="RoundedLabel" customModule="DogYears" customModuleProvider="target">
+                                                            <rect key="frame" x="8" y="8" width="148" height="18"/>
+                                                            <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="18" id="AUd-kf-jJ4"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="textInset">
+                                                                    <real key="value" value="5"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="5"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="History: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hlM-Jm-guO">
+                                                            <rect key="frame" x="8" y="30" width="148" height="27.5"/>
+                                                            <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="14"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dro-cg-3oK" customClass="RoundedButton" customModule="DogYears" customModuleProvider="target">
+                                                            <rect key="frame" x="8" y="65.5" width="23.5" height="23.5"/>
+                                                            <color key="backgroundColor" red="1" green="0.75294117650000003" blue="0.31372549020000001" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="dro-cg-3oK" secondAttribute="height" multiplier="1:1" id="eQ5-Ox-ZDv"/>
+                                                            </constraints>
+                                                            <state key="normal" image="dog"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="5"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                    <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                    <real key="value" value="4"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="selectedColor">
+                                                                    <color key="value" red="1" green="0.67976165129999999" blue="0.25110609420000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </button>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AMZ-up-RMZ" customClass="RoundedLabel" customModule="DogYears" customModuleProvider="target">
+                                                            <rect key="frame" x="8" y="97" width="23.5" height="26"/>
+                                                            <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="5"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EYc-Ye-gMY" customClass="RoundedLabel" customModule="DogYears" customModuleProvider="target">
+                                                            <rect key="frame" x="8" y="131" width="23.5" height="26"/>
+                                                            <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="5"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aLh-HL-jbZ" customClass="RoundedLabel" customModule="DogYears" customModuleProvider="target">
+                                                            <rect key="frame" x="8" y="165" width="23.5" height="26"/>
+                                                            <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="5"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mMq-Ab-0ua" customClass="RoundedLabel" customModule="DogYears" customModuleProvider="target">
+                                                            <rect key="frame" x="8" y="199" width="54.5" height="26"/>
+                                                            <color key="backgroundColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="5"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hoU-I8-h0E" customClass="RoundedLabel" customModule="DogYears" customModuleProvider="target">
+                                                            <rect key="frame" x="39.5" y="97" width="23" height="26"/>
+                                                            <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="5"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xGD-HO-wVB" customClass="RoundedLabel" customModule="DogYears" customModuleProvider="target">
+                                                            <rect key="frame" x="70.5" y="97" width="23" height="26"/>
+                                                            <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="5"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b6y-f4-qjt" customClass="RoundedLabel" customModule="DogYears" customModuleProvider="target">
+                                                            <rect key="frame" x="70.5" y="131" width="23" height="26"/>
+                                                            <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="5"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8pv-bL-9KW" customClass="RoundedLabel" customModule="DogYears" customModuleProvider="target">
+                                                            <rect key="frame" x="39.5" y="131" width="23" height="26"/>
+                                                            <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="5"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n7G-Wh-4XJ" customClass="RoundedLabel" customModule="DogYears" customModuleProvider="target">
+                                                            <rect key="frame" x="39.5" y="165" width="23" height="26"/>
+                                                            <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="5"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pg7-bH-IZe" customClass="RoundedLabel" customModule="DogYears" customModuleProvider="target">
+                                                            <rect key="frame" x="70.5" y="164.5" width="23" height="26"/>
+                                                            <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="5"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z0i-RW-LOl" customClass="RoundedLabel" customModule="DogYears" customModuleProvider="target">
+                                                            <rect key="frame" x="70.5" y="198.5" width="23" height="26.5"/>
+                                                            <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="5"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="÷" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rzo-su-VnU" customClass="RoundedLabel" customModule="DogYears" customModuleProvider="target">
+                                                            <rect key="frame" x="101.5" y="97" width="23" height="26"/>
+                                                            <color key="backgroundColor" red="1" green="0.75294117650000003" blue="0.31372549020000001" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="5"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="×" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zNJ-Ns-5V9" customClass="RoundedLabel" customModule="DogYears" customModuleProvider="target">
+                                                            <rect key="frame" x="101.5" y="131" width="23" height="26"/>
+                                                            <color key="backgroundColor" red="1" green="0.75294117650000003" blue="0.31372549020000001" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="5"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="−" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9M3-mN-Chr" customClass="RoundedLabel" customModule="DogYears" customModuleProvider="target">
+                                                            <rect key="frame" x="101.5" y="164.5" width="23" height="26"/>
+                                                            <color key="backgroundColor" red="1" green="0.75294117650000003" blue="0.31372549020000001" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="5"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mF8-Hp-afQ" customClass="RoundedLabel" customModule="DogYears" customModuleProvider="target">
+                                                            <rect key="frame" x="101.5" y="198.5" width="23" height="26.5"/>
+                                                            <color key="backgroundColor" red="1" green="0.75294117650000003" blue="0.31372549020000001" alpha="0.5019869942196532" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="5"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="=" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PqN-I2-ZTJ" customClass="RoundedLabel" customModule="DogYears" customModuleProvider="target">
+                                                            <rect key="frame" x="132.5" y="165" width="23.5" height="60"/>
+                                                            <color key="backgroundColor" red="1" green="0.75294117650000003" blue="0.31372549020000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="5"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zRS-j7-MKE" customClass="RoundedLabel" customModule="DogYears" customModuleProvider="target">
+                                                            <rect key="frame" x="132.5" y="131.5" width="23.5" height="26"/>
+                                                            <color key="backgroundColor" red="1" green="0.21450401029999999" blue="0.15291253220000001" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="5"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="◀︎" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mP8-4w-kDs" customClass="RoundedLabel" customModule="DogYears" customModuleProvider="target">
+                                                            <rect key="frame" x="132.5" y="66" width="23.5" height="57.5"/>
+                                                            <color key="backgroundColor" red="1" green="0.21568627450980393" blue="0.15294117647058825" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="5"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mp7-Md-Khn" customClass="RoundedButton" customModule="DogYears" customModuleProvider="target">
+                                                            <rect key="frame" x="39.5" y="65.5" width="23" height="23.5"/>
+                                                            <color key="backgroundColor" red="1" green="0.75294117650000003" blue="0.31372549020000001" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="mp7-Md-Khn" secondAttribute="height" multiplier="1:1" id="gCA-DD-w7d"/>
+                                                            </constraints>
+                                                            <state key="normal" image="cat"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="5"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                    <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                    <real key="value" value="4"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="selectedColor">
+                                                                    <color key="value" red="1" green="0.67976165129999999" blue="0.25110609420000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gQV-Us-uFZ" customClass="RoundedButton" customModule="DogYears" customModuleProvider="target">
+                                                            <rect key="frame" x="70" y="65.5" width="23" height="23.5"/>
+                                                            <color key="backgroundColor" red="1" green="0.75294117650000003" blue="0.31372549020000001" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="gQV-Us-uFZ" secondAttribute="height" multiplier="1:1" id="2zL-1w-uoE"/>
+                                                            </constraints>
+                                                            <state key="normal" image="chicken"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="5"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                    <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                    <real key="value" value="4"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="selectedColor">
+                                                                    <color key="value" red="1" green="0.67976165129999999" blue="0.25110609420000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U2g-gg-KFP" customClass="RoundedButton" customModule="DogYears" customModuleProvider="target">
+                                                            <rect key="frame" x="101" y="66" width="23" height="23"/>
+                                                            <color key="backgroundColor" red="1" green="0.75294117650000003" blue="0.31372549020000001" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="U2g-gg-KFP" secondAttribute="height" multiplier="1:1" id="XXp-LK-Xun"/>
+                                                            </constraints>
+                                                            <state key="normal" image="human"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="5"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                    <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                    <real key="value" value="4"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="selectedColor">
+                                                                    <color key="value" red="1" green="0.67976165129999999" blue="0.25110609420000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </button>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="hlM-Jm-guO" firstAttribute="top" secondItem="Goz-mJ-16a" secondAttribute="bottom" constant="4" id="0Tr-98-dEW"/>
+                                                        <constraint firstItem="mp7-Md-Khn" firstAttribute="width" secondItem="n7G-Wh-4XJ" secondAttribute="width" id="0rm-77-ht4"/>
+                                                        <constraint firstItem="b6y-f4-qjt" firstAttribute="height" secondItem="n7G-Wh-4XJ" secondAttribute="height" id="1R7-NP-CJK"/>
+                                                        <constraint firstItem="zNJ-Ns-5V9" firstAttribute="height" secondItem="n7G-Wh-4XJ" secondAttribute="height" id="2qT-CS-9S2"/>
+                                                        <constraint firstItem="mMq-Ab-0ua" firstAttribute="trailing" secondItem="n7G-Wh-4XJ" secondAttribute="trailing" id="32b-2C-bK2"/>
+                                                        <constraint firstAttribute="trailing" secondItem="mP8-4w-kDs" secondAttribute="trailing" constant="8" id="4OD-jL-Hbb"/>
+                                                        <constraint firstItem="aLh-HL-jbZ" firstAttribute="leading" secondItem="SFX-n1-DuT" secondAttribute="leading" constant="8" id="4jl-NN-f3g"/>
+                                                        <constraint firstItem="EYc-Ye-gMY" firstAttribute="top" secondItem="AMZ-up-RMZ" secondAttribute="bottom" constant="8" id="612-ya-36e"/>
+                                                        <constraint firstAttribute="trailing" secondItem="hlM-Jm-guO" secondAttribute="trailing" constant="8" id="6Pb-CQ-F5k"/>
+                                                        <constraint firstItem="mF8-Hp-afQ" firstAttribute="height" secondItem="n7G-Wh-4XJ" secondAttribute="height" id="9ck-Vy-kjO"/>
+                                                        <constraint firstItem="AMZ-up-RMZ" firstAttribute="height" secondItem="n7G-Wh-4XJ" secondAttribute="height" id="ArH-nX-NYf"/>
+                                                        <constraint firstItem="mP8-4w-kDs" firstAttribute="top" secondItem="U2g-gg-KFP" secondAttribute="top" id="B9u-lJ-zQj"/>
+                                                        <constraint firstItem="pg7-bH-IZe" firstAttribute="top" secondItem="b6y-f4-qjt" secondAttribute="bottom" constant="8" id="DdF-Rc-6ka"/>
+                                                        <constraint firstItem="mp7-Md-Khn" firstAttribute="leading" secondItem="dro-cg-3oK" secondAttribute="trailing" constant="8" id="DsS-VZ-H7L"/>
+                                                        <constraint firstItem="PqN-I2-ZTJ" firstAttribute="leading" secondItem="mF8-Hp-afQ" secondAttribute="trailing" constant="8" id="EAG-ow-OEN"/>
+                                                        <constraint firstItem="rzo-su-VnU" firstAttribute="width" secondItem="n7G-Wh-4XJ" secondAttribute="width" id="FC9-3W-zWB"/>
+                                                        <constraint firstItem="b6y-f4-qjt" firstAttribute="leading" secondItem="8pv-bL-9KW" secondAttribute="trailing" constant="8" id="Fec-Nl-oKb"/>
+                                                        <constraint firstItem="PqN-I2-ZTJ" firstAttribute="leading" secondItem="9M3-mN-Chr" secondAttribute="trailing" constant="8" id="Fps-MZ-D7o"/>
+                                                        <constraint firstItem="hoU-I8-h0E" firstAttribute="width" secondItem="n7G-Wh-4XJ" secondAttribute="width" id="GxW-zj-Air"/>
+                                                        <constraint firstItem="dro-cg-3oK" firstAttribute="width" secondItem="n7G-Wh-4XJ" secondAttribute="width" id="H43-I4-E9O"/>
+                                                        <constraint firstAttribute="bottom" secondItem="mMq-Ab-0ua" secondAttribute="bottom" constant="8" id="I4K-SY-ipU"/>
+                                                        <constraint firstItem="mMq-Ab-0ua" firstAttribute="height" secondItem="n7G-Wh-4XJ" secondAttribute="height" id="IaU-69-XR2"/>
+                                                        <constraint firstItem="dro-cg-3oK" firstAttribute="top" secondItem="hlM-Jm-guO" secondAttribute="bottom" constant="8" id="Ip1-r1-H4D"/>
+                                                        <constraint firstItem="9M3-mN-Chr" firstAttribute="height" secondItem="n7G-Wh-4XJ" secondAttribute="height" id="J3h-R8-Yof"/>
+                                                        <constraint firstItem="zRS-j7-MKE" firstAttribute="leading" secondItem="zNJ-Ns-5V9" secondAttribute="trailing" constant="8" id="Jrh-o9-WqC"/>
+                                                        <constraint firstItem="pg7-bH-IZe" firstAttribute="height" secondItem="n7G-Wh-4XJ" secondAttribute="height" id="KlP-kh-Bdp"/>
+                                                        <constraint firstAttribute="bottom" secondItem="PqN-I2-ZTJ" secondAttribute="bottom" constant="8" id="MDg-BR-nSt"/>
+                                                        <constraint firstItem="hoU-I8-h0E" firstAttribute="top" secondItem="mp7-Md-Khn" secondAttribute="bottom" constant="8" id="NE0-KZ-cFl"/>
+                                                        <constraint firstItem="zNJ-Ns-5V9" firstAttribute="width" secondItem="n7G-Wh-4XJ" secondAttribute="width" id="Nah-1y-1jK"/>
+                                                        <constraint firstItem="mP8-4w-kDs" firstAttribute="leading" secondItem="U2g-gg-KFP" secondAttribute="trailing" constant="8" id="Ndc-mE-jdb"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Goz-mJ-16a" secondAttribute="trailing" constant="8" id="OVP-Un-Gf9"/>
+                                                        <constraint firstItem="PqN-I2-ZTJ" firstAttribute="top" secondItem="zRS-j7-MKE" secondAttribute="bottom" constant="8" id="OhN-bS-B8Y"/>
+                                                        <constraint firstItem="mF8-Hp-afQ" firstAttribute="leading" secondItem="Z0i-RW-LOl" secondAttribute="trailing" constant="8" id="Oj4-X2-eYG"/>
+                                                        <constraint firstItem="mMq-Ab-0ua" firstAttribute="top" secondItem="aLh-HL-jbZ" secondAttribute="bottom" constant="8" id="P99-NG-wCI"/>
+                                                        <constraint firstAttribute="trailing" secondItem="PqN-I2-ZTJ" secondAttribute="trailing" constant="8" id="Pnm-Pr-qjW"/>
+                                                        <constraint firstItem="gQV-Us-uFZ" firstAttribute="leading" secondItem="mp7-Md-Khn" secondAttribute="trailing" constant="8" id="QJT-8m-OGG"/>
+                                                        <constraint firstItem="gQV-Us-uFZ" firstAttribute="top" secondItem="hlM-Jm-guO" secondAttribute="bottom" constant="8" id="QfS-tv-zyi"/>
+                                                        <constraint firstItem="pg7-bH-IZe" firstAttribute="leading" secondItem="n7G-Wh-4XJ" secondAttribute="trailing" constant="8" id="Rqy-cz-d5L"/>
+                                                        <constraint firstItem="U2g-gg-KFP" firstAttribute="leading" secondItem="gQV-Us-uFZ" secondAttribute="trailing" constant="8" id="S3U-1S-bX8"/>
+                                                        <constraint firstItem="Z0i-RW-LOl" firstAttribute="height" secondItem="n7G-Wh-4XJ" secondAttribute="height" id="SDx-ab-QRx"/>
+                                                        <constraint firstItem="mMq-Ab-0ua" firstAttribute="leading" secondItem="SFX-n1-DuT" secondAttribute="leading" constant="8" id="Sux-CB-lhh"/>
+                                                        <constraint firstItem="xGD-HO-wVB" firstAttribute="top" secondItem="gQV-Us-uFZ" secondAttribute="bottom" constant="8" id="TPg-gm-qI0"/>
+                                                        <constraint firstItem="Z0i-RW-LOl" firstAttribute="leading" secondItem="mMq-Ab-0ua" secondAttribute="trailing" constant="8" id="TkT-7G-IbA"/>
+                                                        <constraint firstItem="mP8-4w-kDs" firstAttribute="leading" secondItem="rzo-su-VnU" secondAttribute="trailing" constant="8" id="Ub1-Vd-qDe"/>
+                                                        <constraint firstItem="zNJ-Ns-5V9" firstAttribute="leading" secondItem="b6y-f4-qjt" secondAttribute="trailing" constant="8" id="Utn-C4-kYP"/>
+                                                        <constraint firstItem="b6y-f4-qjt" firstAttribute="width" secondItem="n7G-Wh-4XJ" secondAttribute="width" id="V0V-eb-2pQ"/>
+                                                        <constraint firstItem="PqN-I2-ZTJ" firstAttribute="width" secondItem="n7G-Wh-4XJ" secondAttribute="width" id="VTb-ti-69H"/>
+                                                        <constraint firstItem="8pv-bL-9KW" firstAttribute="top" secondItem="hoU-I8-h0E" secondAttribute="bottom" constant="8" id="Vm3-V8-mHf"/>
+                                                        <constraint firstAttribute="trailing" secondItem="zRS-j7-MKE" secondAttribute="trailing" constant="8" id="WO4-rr-T8q"/>
+                                                        <constraint firstItem="rzo-su-VnU" firstAttribute="leading" secondItem="xGD-HO-wVB" secondAttribute="trailing" constant="8" id="XQU-Ci-npA"/>
+                                                        <constraint firstItem="Z0i-RW-LOl" firstAttribute="top" secondItem="pg7-bH-IZe" secondAttribute="bottom" constant="8" id="YSi-p8-lum"/>
+                                                        <constraint firstAttribute="bottom" secondItem="Z0i-RW-LOl" secondAttribute="bottom" constant="8" id="YUu-27-ibS"/>
+                                                        <constraint firstItem="U2g-gg-KFP" firstAttribute="width" secondItem="n7G-Wh-4XJ" secondAttribute="width" id="YaK-tq-edb"/>
+                                                        <constraint firstItem="mF8-Hp-afQ" firstAttribute="top" secondItem="9M3-mN-Chr" secondAttribute="bottom" constant="8" id="YgV-QA-9Na"/>
+                                                        <constraint firstItem="aLh-HL-jbZ" firstAttribute="top" secondItem="EYc-Ye-gMY" secondAttribute="bottom" constant="8" id="ZI4-kC-bCs"/>
+                                                        <constraint firstItem="zNJ-Ns-5V9" firstAttribute="top" secondItem="rzo-su-VnU" secondAttribute="bottom" constant="8" id="ZJK-ZP-LC4"/>
+                                                        <constraint firstAttribute="bottom" secondItem="mF8-Hp-afQ" secondAttribute="bottom" constant="8" id="ZhC-kb-neI"/>
+                                                        <constraint firstItem="9M3-mN-Chr" firstAttribute="top" secondItem="zNJ-Ns-5V9" secondAttribute="bottom" constant="8" id="aLg-VG-fjJ"/>
+                                                        <constraint firstItem="AMZ-up-RMZ" firstAttribute="width" secondItem="n7G-Wh-4XJ" secondAttribute="width" id="anE-zI-I2A"/>
+                                                        <constraint firstItem="Goz-mJ-16a" firstAttribute="leading" secondItem="SFX-n1-DuT" secondAttribute="leading" constant="8" id="asf-YC-EAF"/>
+                                                        <constraint firstItem="pg7-bH-IZe" firstAttribute="width" secondItem="n7G-Wh-4XJ" secondAttribute="width" id="b4h-Vd-ORc"/>
+                                                        <constraint firstItem="rzo-su-VnU" firstAttribute="height" secondItem="n7G-Wh-4XJ" secondAttribute="height" id="b7v-Kt-rtO"/>
+                                                        <constraint firstItem="aLh-HL-jbZ" firstAttribute="height" secondItem="n7G-Wh-4XJ" secondAttribute="height" id="bBR-qM-LFU"/>
+                                                        <constraint firstItem="AMZ-up-RMZ" firstAttribute="top" secondItem="dro-cg-3oK" secondAttribute="bottom" constant="8" id="bde-4d-jyK"/>
+                                                        <constraint firstItem="mMq-Ab-0ua" firstAttribute="top" secondItem="n7G-Wh-4XJ" secondAttribute="bottom" constant="8" id="bf8-pU-Ubw"/>
+                                                        <constraint firstItem="n7G-Wh-4XJ" firstAttribute="leading" secondItem="aLh-HL-jbZ" secondAttribute="trailing" constant="8" id="bzD-j1-idJ"/>
+                                                        <constraint firstItem="zRS-j7-MKE" firstAttribute="top" secondItem="mP8-4w-kDs" secondAttribute="bottom" constant="8" id="c5Z-eI-Z3C"/>
+                                                        <constraint firstItem="hoU-I8-h0E" firstAttribute="height" secondItem="n7G-Wh-4XJ" secondAttribute="height" id="fC2-XR-Yws"/>
+                                                        <constraint firstItem="Z0i-RW-LOl" firstAttribute="width" secondItem="n7G-Wh-4XJ" secondAttribute="width" id="gfr-ca-XAW"/>
+                                                        <constraint firstItem="xGD-HO-wVB" firstAttribute="leading" secondItem="hoU-I8-h0E" secondAttribute="trailing" constant="8" id="gnt-oh-ez3"/>
+                                                        <constraint firstItem="hoU-I8-h0E" firstAttribute="leading" secondItem="AMZ-up-RMZ" secondAttribute="trailing" constant="8" id="gtW-R2-Yfx"/>
+                                                        <constraint firstItem="mMq-Ab-0ua" firstAttribute="width" secondItem="n7G-Wh-4XJ" secondAttribute="width" multiplier="2" constant="8" id="hPc-Gh-6IT"/>
+                                                        <constraint firstItem="aLh-HL-jbZ" firstAttribute="width" secondItem="n7G-Wh-4XJ" secondAttribute="width" id="hUK-0W-Y9q"/>
+                                                        <constraint firstItem="mp7-Md-Khn" firstAttribute="top" secondItem="hlM-Jm-guO" secondAttribute="bottom" constant="8" id="hcK-Re-iIw"/>
+                                                        <constraint firstItem="EYc-Ye-gMY" firstAttribute="height" secondItem="n7G-Wh-4XJ" secondAttribute="height" id="i38-bC-yCY"/>
+                                                        <constraint firstItem="8pv-bL-9KW" firstAttribute="leading" secondItem="EYc-Ye-gMY" secondAttribute="trailing" constant="8" id="jW5-zJ-rxG"/>
+                                                        <constraint firstItem="AMZ-up-RMZ" firstAttribute="leading" secondItem="SFX-n1-DuT" secondAttribute="leading" constant="8" id="kUe-S3-vV4"/>
+                                                        <constraint firstItem="EYc-Ye-gMY" firstAttribute="leading" secondItem="SFX-n1-DuT" secondAttribute="leading" constant="8" id="oT6-jc-M7n"/>
+                                                        <constraint firstItem="8pv-bL-9KW" firstAttribute="width" secondItem="n7G-Wh-4XJ" secondAttribute="width" id="oXu-cK-1jn"/>
+                                                        <constraint firstItem="gQV-Us-uFZ" firstAttribute="width" secondItem="n7G-Wh-4XJ" secondAttribute="width" id="odF-UX-pr7"/>
+                                                        <constraint firstItem="dro-cg-3oK" firstAttribute="leading" secondItem="SFX-n1-DuT" secondAttribute="leading" constant="8" id="otE-Og-s0p"/>
+                                                        <constraint firstItem="mF8-Hp-afQ" firstAttribute="width" secondItem="n7G-Wh-4XJ" secondAttribute="width" id="pvh-bl-Xcq"/>
+                                                        <constraint firstItem="n7G-Wh-4XJ" firstAttribute="top" secondItem="8pv-bL-9KW" secondAttribute="bottom" constant="8" id="qqI-7e-69m"/>
+                                                        <constraint firstItem="b6y-f4-qjt" firstAttribute="top" secondItem="xGD-HO-wVB" secondAttribute="bottom" constant="8" id="qsN-Ty-wnL"/>
+                                                        <constraint firstItem="Goz-mJ-16a" firstAttribute="top" secondItem="SFX-n1-DuT" secondAttribute="top" constant="8" id="rwF-Ps-o0S"/>
+                                                        <constraint firstItem="9M3-mN-Chr" firstAttribute="width" secondItem="n7G-Wh-4XJ" secondAttribute="width" id="tUK-9Z-kai"/>
+                                                        <constraint firstItem="mP8-4w-kDs" firstAttribute="width" secondItem="n7G-Wh-4XJ" secondAttribute="width" id="uBp-61-Iy3"/>
+                                                        <constraint firstItem="EYc-Ye-gMY" firstAttribute="width" secondItem="n7G-Wh-4XJ" secondAttribute="width" id="uEu-Pp-v7z"/>
+                                                        <constraint firstItem="8pv-bL-9KW" firstAttribute="height" secondItem="n7G-Wh-4XJ" secondAttribute="height" id="ugJ-z8-FrH"/>
+                                                        <constraint firstItem="hlM-Jm-guO" firstAttribute="leading" secondItem="SFX-n1-DuT" secondAttribute="leading" constant="8" id="ugt-nM-e9V"/>
+                                                        <constraint firstItem="zRS-j7-MKE" firstAttribute="height" secondItem="n7G-Wh-4XJ" secondAttribute="height" id="ww7-wG-avG"/>
+                                                        <constraint firstItem="xGD-HO-wVB" firstAttribute="width" secondItem="n7G-Wh-4XJ" secondAttribute="width" id="xB7-0s-fOL"/>
+                                                        <constraint firstItem="PqN-I2-ZTJ" firstAttribute="height" secondItem="n7G-Wh-4XJ" secondAttribute="height" multiplier="2" constant="8" id="xUc-O4-6gf"/>
+                                                        <constraint firstItem="xGD-HO-wVB" firstAttribute="height" secondItem="n7G-Wh-4XJ" secondAttribute="height" id="yO0-Hx-1aH"/>
+                                                        <constraint firstItem="zRS-j7-MKE" firstAttribute="width" secondItem="n7G-Wh-4XJ" secondAttribute="width" id="ymw-OM-GSi"/>
+                                                        <constraint firstItem="9M3-mN-Chr" firstAttribute="leading" secondItem="pg7-bH-IZe" secondAttribute="trailing" constant="8" id="zKT-8K-iI7"/>
+                                                        <constraint firstItem="rzo-su-VnU" firstAttribute="top" secondItem="U2g-gg-KFP" secondAttribute="bottom" constant="8" id="zg8-W1-62J"/>
+                                                    </constraints>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="hPc-Gh-6IT"/>
+                                                        </mask>
+                                                    </variation>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TuZ-XG-QQh">
+                                                    <rect key="frame" x="25" y="249" width="130" height="17"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="17" id="C8c-aw-sL7"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Unchecked" translatesAutoresizingMaskIntoConstraints="NO" id="5np-c3-0Z2">
+                                                    <rect key="frame" x="154" y="243.5" width="22" height="22"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="22" id="5EC-fY-19W"/>
+                                                        <constraint firstAttribute="width" constant="22" id="Jdv-T6-d6b"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="5np-c3-0Z2" secondAttribute="trailing" constant="4" id="0hh-HF-u7b"/>
+                                            <constraint firstItem="SFX-n1-DuT" firstAttribute="top" secondItem="C17-wt-Hao" secondAttribute="top" constant="8" id="19t-zq-uyd"/>
+                                            <constraint firstAttribute="trailing" secondItem="TuZ-XG-QQh" secondAttribute="trailing" constant="25" id="4jN-zY-3Qk"/>
+                                            <constraint firstAttribute="bottom" secondItem="5np-c3-0Z2" secondAttribute="bottom" constant="4" id="7IX-2C-MyI"/>
+                                            <constraint firstItem="TuZ-XG-QQh" firstAttribute="leading" secondItem="C17-wt-Hao" secondAttribute="leading" constant="25" id="Hlg-gj-o3Y"/>
+                                            <constraint firstAttribute="bottom" secondItem="TuZ-XG-QQh" secondAttribute="bottom" constant="4" id="RoB-Se-Q3P"/>
+                                            <constraint firstItem="TuZ-XG-QQh" firstAttribute="top" secondItem="SFX-n1-DuT" secondAttribute="bottom" constant="8" id="gnH-Rr-GyO"/>
+                                            <constraint firstAttribute="trailing" secondItem="SFX-n1-DuT" secondAttribute="trailing" constant="8" id="j99-Cn-mkj"/>
+                                            <constraint firstItem="SFX-n1-DuT" firstAttribute="leading" secondItem="C17-wt-Hao" secondAttribute="leading" constant="8" id="q8W-EZ-06Y"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="btnCat" destination="mp7-Md-Khn" id="KJe-Wy-c2z"/>
+                                            <outlet property="btnChicken" destination="gQV-Us-uFZ" id="NeU-cR-Qu1"/>
+                                            <outlet property="btnDog" destination="dro-cg-3oK" id="Xhi-uw-qj9"/>
+                                            <outlet property="btnHuman" destination="U2g-gg-KFP" id="Ksd-aO-gc7"/>
+                                            <outlet property="imgSelected" destination="5np-c3-0Z2" id="PRb-U2-qwU"/>
+                                            <outlet property="lbl0" destination="mMq-Ab-0ua" id="38C-eZ-cny"/>
+                                            <outlet property="lbl1" destination="aLh-HL-jbZ" id="mho-V9-F0a"/>
+                                            <outlet property="lbl2" destination="n7G-Wh-4XJ" id="P2Q-sZ-Wwt"/>
+                                            <outlet property="lbl3" destination="pg7-bH-IZe" id="95l-s5-HSv"/>
+                                            <outlet property="lbl4" destination="EYc-Ye-gMY" id="dNT-nc-SA1"/>
+                                            <outlet property="lbl5" destination="8pv-bL-9KW" id="FUb-rO-8J4"/>
+                                            <outlet property="lbl6" destination="b6y-f4-qjt" id="54r-0d-QS3"/>
+                                            <outlet property="lbl7" destination="AMZ-up-RMZ" id="fK5-05-4XR"/>
+                                            <outlet property="lbl8" destination="hoU-I8-h0E" id="9Bz-lu-48m"/>
+                                            <outlet property="lbl9" destination="xGD-HO-wVB" id="BqM-3q-MzV"/>
+                                            <outlet property="lblAdd" destination="mF8-Hp-afQ" id="9vZ-Eg-J2Q"/>
+                                            <outlet property="lblClear" destination="zRS-j7-MKE" id="JdP-of-qY1"/>
+                                            <outlet property="lblDelete" destination="mP8-4w-kDs" id="ygu-nY-T43"/>
+                                            <outlet property="lblDisplay" destination="Goz-mJ-16a" id="BOf-QT-CPK"/>
+                                            <outlet property="lblDiv" destination="rzo-su-VnU" id="9sE-ew-XLN"/>
+                                            <outlet property="lblDot" destination="Z0i-RW-LOl" id="375-kn-NRj"/>
+                                            <outlet property="lblEqual" destination="PqN-I2-ZTJ" id="K9W-9F-Uhw"/>
+                                            <outlet property="lblHistory" destination="hlM-Jm-guO" id="syI-0M-LhC"/>
+                                            <outlet property="lblMult" destination="zNJ-Ns-5V9" id="kAA-9Q-aNz"/>
+                                            <outlet property="lblName" destination="TuZ-XG-QQh" id="DHr-3R-s4F"/>
+                                            <outlet property="lblSub" destination="9M3-mN-Chr" id="rAC-rf-znu"/>
+                                            <outlet property="vwBG" destination="SFX-n1-DuT" id="m0i-Jd-lI7"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="XQK-9U-3Tj" id="2UF-Q0-fNG"/>
+                                    <outlet property="delegate" destination="XQK-9U-3Tj" id="OTn-eh-lTK"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="3XJ-sk-rNV" firstAttribute="top" secondItem="7bf-1V-FVm" secondAttribute="top" constant="16" id="43M-h0-57j"/>
+                            <constraint firstItem="7bf-1V-FVm" firstAttribute="trailing" secondItem="3XJ-sk-rNV" secondAttribute="trailing" constant="16" id="7rn-Aj-jjK"/>
+                            <constraint firstItem="MNn-YL-ltp" firstAttribute="top" secondItem="3XJ-sk-rNV" secondAttribute="bottom" constant="16" id="HoC-9X-tPd"/>
+                            <constraint firstItem="MNn-YL-ltp" firstAttribute="trailing" secondItem="7bf-1V-FVm" secondAttribute="trailing" id="Lyq-qu-tSW"/>
+                            <constraint firstItem="MNn-YL-ltp" firstAttribute="bottom" secondItem="7bf-1V-FVm" secondAttribute="bottom" id="Tmu-TY-zzF"/>
+                            <constraint firstItem="MNn-YL-ltp" firstAttribute="leading" secondItem="7bf-1V-FVm" secondAttribute="leading" id="Vq7-10-dpd"/>
+                            <constraint firstItem="3XJ-sk-rNV" firstAttribute="leading" secondItem="7bf-1V-FVm" secondAttribute="leading" constant="16" id="uih-DY-zOb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="7bf-1V-FVm"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Settings" id="f4C-WE-2yX"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="collectionView" destination="MNn-YL-ltp" id="qFJ-dq-Z14"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C78-T9-eQh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1501.5999999999999" y="810.94452773613204"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="r7l-gg-dq7">
+            <objects>
+                <navigationController id="vC3-pB-5Vb" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="DjV-YW-jjY">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="07o-lb-eLH" kind="relationship" relationship="rootViewController" id="mbl-1G-43C"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SLD-UC-DBI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-45" y="129"/>
+        </scene>
+        <!--Calculator View Controller-->
+        <scene sceneID="2Zc-l2-6ns">
+            <objects>
+                <viewController storyboardIdentifier="CalculatorView" id="07o-lb-eLH" customClass="CalculatorViewController" customModule="DogYears" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="htV-LQ-bkl"/>
+                        <viewControllerLayoutGuide type="bottom" id="bC0-4R-Lsa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nZG-tg-CIT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lMR-Ns-3y9" customClass="RoundedLabel" customModule="DogYears" customModuleProvider="target">
+                                <rect key="frame" x="16" y="72" width="343" height="42"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="2Kk-ca-tN8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="textInset">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="history: " lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N5b-V3-niu">
+                                <rect key="frame" x="16" y="122" width="343" height="18"/>
+                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="18"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LBp-TH-oYo" customClass="RoundedButton" customModule="DogYears" customModuleProvider="target">
+                                <rect key="frame" x="81" y="221.5" width="65.5" height="103.5"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
+                                <state key="normal" title="8">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="appendDigitWithSender:" destination="07o-lb-eLH" eventType="touchUpInside" id="3dw-N4-nhz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IJ1-ga-KnN" customClass="RoundedButton" customModule="DogYears" customModuleProvider="target">
+                                <rect key="frame" x="154.5" y="221.5" width="65" height="103.5"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
+                                <state key="normal" title="9">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="appendDigitWithSender:" destination="07o-lb-eLH" eventType="touchUpInside" id="L6y-eY-d7g"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fP0-PH-kgP" customClass="RoundedButton" customModule="DogYears" customModuleProvider="target">
+                                <rect key="frame" x="227.5" y="221.5" width="66" height="103.5"/>
+                                <color key="backgroundColor" red="1" green="0.75297379262493258" blue="0.31292531132824719" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="40"/>
+                                <state key="normal" title="÷">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="operateWithSender:" destination="07o-lb-eLH" eventType="touchUpInside" id="Mot-BB-XmZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Clq-hF-M3E" customClass="RoundedButton" customModule="DogYears" customModuleProvider="target">
+                                <rect key="frame" x="227.5" y="333" width="66" height="103.5"/>
+                                <color key="backgroundColor" red="1" green="0.75297379262493258" blue="0.31292531132824719" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="40"/>
+                                <state key="normal" title="×">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="operateWithSender:" destination="07o-lb-eLH" eventType="touchUpInside" id="7OU-DQ-bfg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4pR-r2-TFb" customClass="RoundedButton" customModule="DogYears" customModuleProvider="target">
+                                <rect key="frame" x="227.5" y="444.5" width="66" height="103.5"/>
+                                <color key="backgroundColor" red="1" green="0.75297379262493258" blue="0.31292531132824719" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="40"/>
+                                <state key="normal" title="−">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="operateWithSender:" destination="07o-lb-eLH" eventType="touchUpInside" id="GaJ-4D-Uxl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5aa-f9-SFY" customClass="RoundedButton" customModule="DogYears" customModuleProvider="target">
+                                <rect key="frame" x="81" y="333" width="65.5" height="103.5"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
+                                <state key="normal" title="5">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="appendDigitWithSender:" destination="07o-lb-eLH" eventType="touchUpInside" id="mj3-8N-TTX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vuR-UY-3dm" customClass="RoundedButton" customModule="DogYears" customModuleProvider="target">
+                                <rect key="frame" x="154.5" y="333" width="65" height="103.5"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
+                                <state key="normal" title="6">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="appendDigitWithSender:" destination="07o-lb-eLH" eventType="touchUpInside" id="w7q-gt-ZQW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9gM-HV-BDl" customClass="RoundedButton" customModule="DogYears" customModuleProvider="target">
+                                <rect key="frame" x="81" y="444.5" width="65.5" height="103.5"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
+                                <state key="normal" title="2">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="appendDigitWithSender:" destination="07o-lb-eLH" eventType="touchUpInside" id="Ala-hJ-zth"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ac-Zf-cru" customClass="RoundedButton" customModule="DogYears" customModuleProvider="target">
+                                <rect key="frame" x="154.5" y="444.5" width="65" height="103.5"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
+                                <state key="normal" title="3">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="appendDigitWithSender:" destination="07o-lb-eLH" eventType="touchUpInside" id="SJh-X5-txS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tvp-TB-bd4" customClass="RoundedButton" customModule="DogYears" customModuleProvider="target">
+                                <rect key="frame" x="8" y="556" width="139" height="103"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
+                                <state key="normal" title="0">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="appendDigitWithSender:" destination="07o-lb-eLH" eventType="touchUpInside" id="mEx-Zd-lKf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HSJ-Jv-xw6" customClass="RoundedButton" customModule="DogYears" customModuleProvider="target">
+                                <rect key="frame" x="301.5" y="444.5" width="65.5" height="214.5"/>
+                                <color key="backgroundColor" red="1" green="0.75297379262493258" blue="0.31292531132824719" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="40"/>
+                                <state key="normal" title="=">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="operateWithSender:" destination="07o-lb-eLH" eventType="touchUpInside" id="ZEZ-sg-8KM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MPW-Yy-1HS" customClass="RoundedButton" customModule="DogYears" customModuleProvider="target">
+                                <rect key="frame" x="228.5" y="556" width="66" height="103"/>
+                                <color key="backgroundColor" red="1" green="0.75297379262493258" blue="0.31292531132824719" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="40"/>
+                                <state key="normal" title="+">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="operateWithSender:" destination="07o-lb-eLH" eventType="touchUpInside" id="q3o-xH-GDS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GcA-aw-KPI" customClass="RoundedButton" customModule="DogYears" customModuleProvider="target">
+                                <rect key="frame" x="302" y="148" width="65.5" height="177.5"/>
+                                <color key="backgroundColor" red="1" green="0.2145040103252257" blue="0.15291253222737711" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
+                                <state key="normal" title="◀︎">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="backspace" destination="07o-lb-eLH" eventType="touchUpInside" id="IdP-o2-mRF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w1V-rZ-h48" customClass="RoundedButton" customModule="DogYears" customModuleProvider="target">
+                                <rect key="frame" x="302" y="333" width="65.5" height="103"/>
+                                <color key="backgroundColor" red="1" green="0.2145040103252257" blue="0.15291253222737711" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
+                                <state key="normal" title="C">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="clear" destination="07o-lb-eLH" eventType="touchUpInside" id="aLQ-C1-Rsh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lg2-7u-0HC" customClass="RoundedButton" customModule="DogYears" customModuleProvider="target">
+                                <rect key="frame" x="155" y="555.5" width="65.5" height="103"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="50"/>
+                                <state key="normal" title=".">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="appendDigitWithSender:" destination="07o-lb-eLH" eventType="touchUpInside" id="P7z-R7-Hdr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MfJ-X1-0GC" customClass="RoundedButton" customModule="DogYears" customModuleProvider="target">
+                                <rect key="frame" x="8" y="221.5" width="65" height="103.5"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
+                                <state key="normal" title="7">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="appendDigitWithSender:" destination="07o-lb-eLH" eventType="touchUpInside" id="f5L-uv-gBW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="exp-UD-X30" customClass="RoundedButton" customModule="DogYears" customModuleProvider="target">
+                                <rect key="frame" x="8" y="333" width="65" height="103.5"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
+                                <state key="normal" title="4">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="appendDigitWithSender:" destination="07o-lb-eLH" eventType="touchUpInside" id="e5k-0y-Vnb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6PX-m9-pAa" customClass="RoundedButton" customModule="DogYears" customModuleProvider="target">
+                                <rect key="frame" x="8" y="444" width="65" height="103.5"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
+                                <state key="normal" title="1">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="appendDigitWithSender:" destination="07o-lb-eLH" eventType="touchUpInside" id="GfW-Xu-6pS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ihw-YI-UqY" userLabel="Button - Dog" customClass="RoundedButton" customModule="DogYears" customModuleProvider="target">
+                                <rect key="frame" x="8" y="148" width="65.5" height="65.5"/>
+                                <color key="backgroundColor" red="1" green="0.75294117647058822" blue="0.31372549019607843" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ihw-YI-UqY" secondAttribute="height" multiplier="1:1" id="HTl-WT-mmR"/>
+                                </constraints>
+                                <state key="normal" image="dog"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedColor">
+                                        <color key="value" red="1" green="0.67976165129999999" blue="0.25110609420000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="selectTypeWithSender:" destination="07o-lb-eLH" eventType="touchUpInside" id="HVq-py-1ov"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cEU-Bp-hn7" userLabel="Button - Cat" customClass="RoundedButton" customModule="DogYears" customModuleProvider="target">
+                                <rect key="frame" x="81" y="148" width="65.5" height="65.5"/>
+                                <color key="backgroundColor" red="1" green="0.75297379259999997" blue="0.31292531130000001" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="cEU-Bp-hn7" secondAttribute="height" multiplier="1:1" id="FPe-Xx-R7l"/>
+                                </constraints>
+                                <state key="normal" image="cat"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedColor">
+                                        <color key="value" red="1" green="0.67976165129999999" blue="0.25110609420000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="selectTypeWithSender:" destination="07o-lb-eLH" eventType="touchUpInside" id="jsx-yi-uxv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r62-6t-wE6" userLabel="Button - Chicken" customClass="RoundedButton" customModule="DogYears" customModuleProvider="target">
+                                <rect key="frame" x="154" y="148" width="65.5" height="65.5"/>
+                                <color key="backgroundColor" red="1" green="0.75297379259999997" blue="0.31292531130000001" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="r62-6t-wE6" secondAttribute="height" multiplier="1:1" id="Rcq-Jv-HdM"/>
+                                </constraints>
+                                <state key="normal" image="chicken"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedColor">
+                                        <color key="value" red="1" green="0.67976165129999999" blue="0.25110609420000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="selectTypeWithSender:" destination="07o-lb-eLH" eventType="touchUpInside" id="u0W-rH-DAT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="103" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Jr-uG-Rlz" userLabel="Button - Human" customClass="RoundedButton" customModule="DogYears" customModuleProvider="target">
+                                <rect key="frame" x="227" y="148" width="65.5" height="65.5"/>
+                                <color key="backgroundColor" red="1" green="0.75297379259999997" blue="0.31292531130000001" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="2Jr-uG-Rlz" secondAttribute="height" multiplier="1:1" id="PDb-0h-qkP"/>
+                                </constraints>
+                                <state key="normal" image="human"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedColor">
+                                        <color key="value" red="1" green="0.67976165129999999" blue="0.25110609420000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="selectTypeWithSender:" destination="07o-lb-eLH" eventType="touchUpInside" id="D4a-8N-8SM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="GcA-aw-KPI" firstAttribute="top" secondItem="2Jr-uG-Rlz" secondAttribute="top" id="0EG-6l-toG"/>
+                            <constraint firstItem="9gM-HV-BDl" firstAttribute="width" secondItem="6PX-m9-pAa" secondAttribute="width" id="0Kx-9h-AH2"/>
+                            <constraint firstItem="9gM-HV-BDl" firstAttribute="width" secondItem="IJ1-ga-KnN" secondAttribute="width" id="0cN-Pf-lXd"/>
+                            <constraint firstItem="HSJ-Jv-xw6" firstAttribute="leading" secondItem="4pR-r2-TFb" secondAttribute="trailing" constant="8" id="1G1-wX-6OS"/>
+                            <constraint firstItem="9gM-HV-BDl" firstAttribute="height" secondItem="5aa-f9-SFY" secondAttribute="height" id="3CQ-Hr-Plc"/>
+                            <constraint firstItem="tvp-TB-bd4" firstAttribute="top" secondItem="9gM-HV-BDl" secondAttribute="bottom" constant="8" id="4F8-Vu-jNx"/>
+                            <constraint firstItem="N5b-V3-niu" firstAttribute="leading" secondItem="WAd-FM-mVT" secondAttribute="leading" constant="16" id="4T6-5v-alk"/>
+                            <constraint firstItem="exp-UD-X30" firstAttribute="top" secondItem="MfJ-X1-0GC" secondAttribute="bottom" constant="8" id="4tG-KF-772"/>
+                            <constraint firstItem="9gM-HV-BDl" firstAttribute="width" secondItem="4pR-r2-TFb" secondAttribute="width" id="4v1-5C-9rJ"/>
+                            <constraint firstItem="WAd-FM-mVT" firstAttribute="trailing" secondItem="lMR-Ns-3y9" secondAttribute="trailing" constant="16" id="4xH-5R-KBn"/>
+                            <constraint firstItem="cEU-Bp-hn7" firstAttribute="leading" secondItem="ihw-YI-UqY" secondAttribute="trailing" constant="8" id="4z4-39-cVd"/>
+                            <constraint firstItem="9gM-HV-BDl" firstAttribute="height" secondItem="MPW-Yy-1HS" secondAttribute="height" id="6NJ-WC-Dlf"/>
+                            <constraint firstItem="LBp-TH-oYo" firstAttribute="leading" secondItem="MfJ-X1-0GC" secondAttribute="trailing" constant="8" id="6Nw-28-adn"/>
+                            <constraint firstItem="9gM-HV-BDl" firstAttribute="width" secondItem="GcA-aw-KPI" secondAttribute="width" id="6PS-au-F58"/>
+                            <constraint firstItem="2Ac-Zf-cru" firstAttribute="leading" secondItem="9gM-HV-BDl" secondAttribute="trailing" constant="8" id="7BZ-tq-apT"/>
+                            <constraint firstItem="2Jr-uG-Rlz" firstAttribute="top" secondItem="N5b-V3-niu" secondAttribute="bottom" constant="8" id="7yN-Iy-mLp"/>
+                            <constraint firstItem="exp-UD-X30" firstAttribute="leading" secondItem="WAd-FM-mVT" secondAttribute="leading" constant="8" id="8dX-cI-9Qz"/>
+                            <constraint firstItem="9gM-HV-BDl" firstAttribute="width" secondItem="w1V-rZ-h48" secondAttribute="width" id="8eM-Ls-JpC"/>
+                            <constraint firstItem="Clq-hF-M3E" firstAttribute="top" secondItem="fP0-PH-kgP" secondAttribute="bottom" constant="8" id="9O5-em-cOj"/>
+                            <constraint firstItem="9gM-HV-BDl" firstAttribute="width" secondItem="HSJ-Jv-xw6" secondAttribute="width" id="C5r-IZ-pDL"/>
+                            <constraint firstItem="WAd-FM-mVT" firstAttribute="bottom" secondItem="MPW-Yy-1HS" secondAttribute="bottom" constant="8" id="CDt-6a-A1A"/>
+                            <constraint firstItem="r62-6t-wE6" firstAttribute="leading" secondItem="cEU-Bp-hn7" secondAttribute="trailing" constant="8" id="CgZ-m5-Ioy"/>
+                            <constraint firstItem="2Jr-uG-Rlz" firstAttribute="width" secondItem="9gM-HV-BDl" secondAttribute="width" id="DKd-hH-R8k"/>
+                            <constraint firstItem="MPW-Yy-1HS" firstAttribute="leading" secondItem="Lg2-7u-0HC" secondAttribute="trailing" constant="8" id="Exj-wk-IQS"/>
+                            <constraint firstItem="9gM-HV-BDl" firstAttribute="height" secondItem="Lg2-7u-0HC" secondAttribute="height" id="FE8-x4-uNv"/>
+                            <constraint firstItem="4pR-r2-TFb" firstAttribute="top" secondItem="Clq-hF-M3E" secondAttribute="bottom" constant="8" id="FNb-OG-e8x"/>
+                            <constraint firstItem="6PX-m9-pAa" firstAttribute="leading" secondItem="WAd-FM-mVT" secondAttribute="leading" constant="8" id="FXg-Zq-adx"/>
+                            <constraint firstItem="WAd-FM-mVT" firstAttribute="trailing" secondItem="w1V-rZ-h48" secondAttribute="trailing" constant="8" id="GfO-G7-rKG"/>
+                            <constraint firstItem="9gM-HV-BDl" firstAttribute="width" secondItem="MfJ-X1-0GC" secondAttribute="width" id="IMj-1p-bcS"/>
+                            <constraint firstItem="r62-6t-wE6" firstAttribute="top" secondItem="N5b-V3-niu" secondAttribute="bottom" constant="8" id="IO1-F4-Rsg"/>
+                            <constraint firstItem="5aa-f9-SFY" firstAttribute="top" secondItem="LBp-TH-oYo" secondAttribute="bottom" constant="8" id="Icp-O0-zfZ"/>
+                            <constraint firstItem="6PX-m9-pAa" firstAttribute="top" secondItem="exp-UD-X30" secondAttribute="bottom" constant="8" id="JHA-Fi-xy8"/>
+                            <constraint firstItem="4pR-r2-TFb" firstAttribute="leading" secondItem="2Ac-Zf-cru" secondAttribute="trailing" constant="8" id="NI2-k1-0uK"/>
+                            <constraint firstItem="9gM-HV-BDl" firstAttribute="width" secondItem="vuR-UY-3dm" secondAttribute="width" id="P67-mf-gZm"/>
+                            <constraint firstItem="9gM-HV-BDl" firstAttribute="width" secondItem="LBp-TH-oYo" secondAttribute="width" id="PfO-jW-RIS"/>
+                            <constraint firstItem="MPW-Yy-1HS" firstAttribute="top" secondItem="4pR-r2-TFb" secondAttribute="bottom" constant="8" id="Pna-vr-Nhw"/>
+                            <constraint firstItem="2Ac-Zf-cru" firstAttribute="top" secondItem="vuR-UY-3dm" secondAttribute="bottom" constant="8" id="RFa-Ma-FzG"/>
+                            <constraint firstItem="IJ1-ga-KnN" firstAttribute="leading" secondItem="LBp-TH-oYo" secondAttribute="trailing" constant="8" id="Rx2-jZ-sqq"/>
+                            <constraint firstItem="Lg2-7u-0HC" firstAttribute="top" secondItem="2Ac-Zf-cru" secondAttribute="bottom" constant="8" id="S97-Wl-woZ"/>
+                            <constraint firstItem="IJ1-ga-KnN" firstAttribute="top" secondItem="r62-6t-wE6" secondAttribute="bottom" constant="8" id="SIA-0Z-eC6"/>
+                            <constraint firstItem="9gM-HV-BDl" firstAttribute="height" secondItem="LBp-TH-oYo" secondAttribute="height" id="SXV-Pe-bpr"/>
+                            <constraint firstItem="MfJ-X1-0GC" firstAttribute="leading" secondItem="WAd-FM-mVT" secondAttribute="leading" constant="8" id="TH8-WY-cSZ"/>
+                            <constraint firstItem="cEU-Bp-hn7" firstAttribute="top" secondItem="N5b-V3-niu" secondAttribute="bottom" constant="8" id="U37-WE-4Q0"/>
+                            <constraint firstItem="w1V-rZ-h48" firstAttribute="top" secondItem="Clq-hF-M3E" secondAttribute="top" id="UBx-fy-pGZ"/>
+                            <constraint firstItem="9gM-HV-BDl" firstAttribute="top" secondItem="5aa-f9-SFY" secondAttribute="bottom" constant="8" id="VE5-XN-fBS"/>
+                            <constraint firstItem="9gM-HV-BDl" firstAttribute="height" secondItem="w1V-rZ-h48" secondAttribute="height" id="VHJ-7p-lga"/>
+                            <constraint firstItem="9gM-HV-BDl" firstAttribute="height" secondItem="6PX-m9-pAa" secondAttribute="height" id="WPN-8I-66f"/>
+                            <constraint firstItem="9gM-HV-BDl" firstAttribute="height" secondItem="vuR-UY-3dm" secondAttribute="height" id="WUS-uz-L0T"/>
+                            <constraint firstItem="9gM-HV-BDl" firstAttribute="width" secondItem="Lg2-7u-0HC" secondAttribute="width" id="XBe-4p-oD5"/>
+                            <constraint firstItem="9gM-HV-BDl" firstAttribute="height" secondItem="HSJ-Jv-xw6" secondAttribute="height" multiplier="1:2" constant="-4" id="Y3Z-iS-qrM"/>
+                            <constraint firstItem="9gM-HV-BDl" firstAttribute="width" secondItem="exp-UD-X30" secondAttribute="width" id="Yku-K2-UdS"/>
+                            <constraint firstItem="9gM-HV-BDl" firstAttribute="width" secondItem="Clq-hF-M3E" secondAttribute="width" id="aZe-UF-Fnk"/>
+                            <constraint firstItem="9gM-HV-BDl" firstAttribute="leading" secondItem="6PX-m9-pAa" secondAttribute="trailing" constant="8" id="axj-GN-oex"/>
+                            <constraint firstItem="9gM-HV-BDl" firstAttribute="height" secondItem="2Ac-Zf-cru" secondAttribute="height" id="bod-5c-oKv"/>
+                            <constraint firstItem="N5b-V3-niu" firstAttribute="top" secondItem="lMR-Ns-3y9" secondAttribute="bottom" constant="8" id="c1Q-P0-a1P"/>
+                            <constraint firstItem="cEU-Bp-hn7" firstAttribute="width" secondItem="9gM-HV-BDl" secondAttribute="width" id="ccL-sL-IwE"/>
+                            <constraint firstItem="lMR-Ns-3y9" firstAttribute="leading" secondItem="WAd-FM-mVT" secondAttribute="leading" constant="16" id="czl-07-KTk"/>
+                            <constraint firstItem="fP0-PH-kgP" firstAttribute="leading" secondItem="IJ1-ga-KnN" secondAttribute="trailing" constant="8" id="dee-lz-qfs"/>
+                            <constraint firstItem="ihw-YI-UqY" firstAttribute="leading" secondItem="WAd-FM-mVT" secondAttribute="leading" constant="8" id="edq-mj-Ti5"/>
+                            <constraint firstItem="vuR-UY-3dm" firstAttribute="leading" secondItem="5aa-f9-SFY" secondAttribute="trailing" constant="8" id="epX-Ka-o7S"/>
+                            <constraint firstItem="WAd-FM-mVT" firstAttribute="trailing" secondItem="HSJ-Jv-xw6" secondAttribute="trailing" constant="8" id="f5f-4o-kXt"/>
+                            <constraint firstItem="5aa-f9-SFY" firstAttribute="leading" secondItem="exp-UD-X30" secondAttribute="trailing" constant="8" id="gE0-Fi-W6S"/>
+                            <constraint firstItem="Lg2-7u-0HC" firstAttribute="leading" secondItem="tvp-TB-bd4" secondAttribute="trailing" constant="8" id="gEw-AX-mxs"/>
+                            <constraint firstItem="WAd-FM-mVT" firstAttribute="bottom" secondItem="HSJ-Jv-xw6" secondAttribute="bottom" constant="8" id="h9P-ss-O1G"/>
+                            <constraint firstItem="9gM-HV-BDl" firstAttribute="width" secondItem="MPW-Yy-1HS" secondAttribute="width" id="hPo-qU-asV"/>
+                            <constraint firstItem="LBp-TH-oYo" firstAttribute="top" secondItem="cEU-Bp-hn7" secondAttribute="bottom" constant="8" id="iJp-Fc-gcd"/>
+                            <constraint firstItem="2Jr-uG-Rlz" firstAttribute="leading" secondItem="r62-6t-wE6" secondAttribute="trailing" constant="8" id="iYc-0b-g34"/>
+                            <constraint firstItem="ihw-YI-UqY" firstAttribute="width" secondItem="9gM-HV-BDl" secondAttribute="width" id="joD-3L-JeY"/>
+                            <constraint firstItem="9gM-HV-BDl" firstAttribute="width" secondItem="fP0-PH-kgP" secondAttribute="width" id="jsj-6J-Gnq"/>
+                            <constraint firstItem="tvp-TB-bd4" firstAttribute="leading" secondItem="WAd-FM-mVT" secondAttribute="leading" constant="8" id="jtl-rP-YV5"/>
+                            <constraint firstItem="WAd-FM-mVT" firstAttribute="bottom" secondItem="tvp-TB-bd4" secondAttribute="bottom" constant="8" id="lmJ-Su-bu9"/>
+                            <constraint firstItem="9gM-HV-BDl" firstAttribute="height" secondItem="IJ1-ga-KnN" secondAttribute="height" id="mDS-g1-8YT"/>
+                            <constraint firstItem="WAd-FM-mVT" firstAttribute="trailing" secondItem="N5b-V3-niu" secondAttribute="trailing" constant="16" id="mOd-ca-j03"/>
+                            <constraint firstItem="9gM-HV-BDl" firstAttribute="height" secondItem="4pR-r2-TFb" secondAttribute="height" id="mdg-q7-kJL"/>
+                            <constraint firstItem="GcA-aw-KPI" firstAttribute="leading" secondItem="fP0-PH-kgP" secondAttribute="trailing" constant="8" id="n3t-fr-Kb9"/>
+                            <constraint firstItem="Clq-hF-M3E" firstAttribute="leading" secondItem="vuR-UY-3dm" secondAttribute="trailing" constant="8" id="ne6-cI-avD"/>
+                            <constraint firstItem="9gM-HV-BDl" firstAttribute="width" secondItem="2Ac-Zf-cru" secondAttribute="width" id="qCr-v6-P6a"/>
+                            <constraint firstItem="WAd-FM-mVT" firstAttribute="top" secondItem="lMR-Ns-3y9" secondAttribute="top" constant="-8" id="qYb-ec-cop"/>
+                            <constraint firstItem="9gM-HV-BDl" firstAttribute="height" secondItem="MfJ-X1-0GC" secondAttribute="height" id="r75-Yg-TDY"/>
+                            <constraint firstItem="9gM-HV-BDl" firstAttribute="height" secondItem="Clq-hF-M3E" secondAttribute="height" id="rfr-Ql-jvy"/>
+                            <constraint firstItem="w1V-rZ-h48" firstAttribute="leading" secondItem="Clq-hF-M3E" secondAttribute="trailing" constant="8" id="s3k-H3-eMc"/>
+                            <constraint firstItem="9gM-HV-BDl" firstAttribute="width" secondItem="tvp-TB-bd4" secondAttribute="width" multiplier="1:2" constant="-4" id="sYA-zh-HXO"/>
+                            <constraint firstItem="MfJ-X1-0GC" firstAttribute="top" secondItem="ihw-YI-UqY" secondAttribute="bottom" constant="8" id="svV-Ad-leV"/>
+                            <constraint firstItem="9gM-HV-BDl" firstAttribute="width" secondItem="5aa-f9-SFY" secondAttribute="width" id="tIS-nt-4H3"/>
+                            <constraint firstItem="fP0-PH-kgP" firstAttribute="top" secondItem="2Jr-uG-Rlz" secondAttribute="bottom" constant="8" id="uG1-Bc-6G3"/>
+                            <constraint firstItem="ihw-YI-UqY" firstAttribute="top" secondItem="N5b-V3-niu" secondAttribute="bottom" constant="8" id="uhn-2e-9r8"/>
+                            <constraint firstItem="WAd-FM-mVT" firstAttribute="trailing" secondItem="GcA-aw-KPI" secondAttribute="trailing" constant="8" id="vDT-rk-lmF"/>
+                            <constraint firstItem="r62-6t-wE6" firstAttribute="width" secondItem="9gM-HV-BDl" secondAttribute="width" id="vFf-x7-RJO"/>
+                            <constraint firstItem="WAd-FM-mVT" firstAttribute="bottom" secondItem="Lg2-7u-0HC" secondAttribute="bottom" constant="8" id="vWM-W3-sM2"/>
+                            <constraint firstItem="9gM-HV-BDl" firstAttribute="height" secondItem="exp-UD-X30" secondAttribute="height" id="w8t-sW-Pib"/>
+                            <constraint firstItem="w1V-rZ-h48" firstAttribute="top" secondItem="GcA-aw-KPI" secondAttribute="bottom" constant="8" id="ywn-pv-kcs"/>
+                            <constraint firstItem="9gM-HV-BDl" firstAttribute="height" secondItem="fP0-PH-kgP" secondAttribute="height" id="zFo-QR-65o"/>
+                            <constraint firstItem="9gM-HV-BDl" firstAttribute="height" secondItem="tvp-TB-bd4" secondAttribute="height" id="zO6-bA-bFY"/>
+                            <constraint firstItem="vuR-UY-3dm" firstAttribute="top" secondItem="IJ1-ga-KnN" secondAttribute="bottom" constant="8" id="zZL-t0-fRb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="WAd-FM-mVT"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Seg-4k-qWP"/>
+                    <connections>
+                        <outlet property="btn0" destination="tvp-TB-bd4" id="BRM-Yq-vId"/>
+                        <outlet property="btn1" destination="6PX-m9-pAa" id="Eet-RV-Q4q"/>
+                        <outlet property="btn2" destination="9gM-HV-BDl" id="fAd-rZ-GDc"/>
+                        <outlet property="btn3" destination="2Ac-Zf-cru" id="U2z-pa-3GO"/>
+                        <outlet property="btn4" destination="exp-UD-X30" id="de3-1s-KVg"/>
+                        <outlet property="btn5" destination="5aa-f9-SFY" id="n1V-up-9a6"/>
+                        <outlet property="btn6" destination="vuR-UY-3dm" id="jdl-uX-2d9"/>
+                        <outlet property="btn7" destination="MfJ-X1-0GC" id="LWq-De-rns"/>
+                        <outlet property="btn8" destination="LBp-TH-oYo" id="a2Z-C5-xp3"/>
+                        <outlet property="btn9" destination="IJ1-ga-KnN" id="T1z-xS-7Fj"/>
+                        <outlet property="btnAdd" destination="MPW-Yy-1HS" id="JsL-1B-k4Z"/>
+                        <outlet property="btnCat" destination="cEU-Bp-hn7" id="ipS-Bk-b7J"/>
+                        <outlet property="btnChicken" destination="r62-6t-wE6" id="nhE-bc-RCW"/>
+                        <outlet property="btnClear" destination="w1V-rZ-h48" id="2ax-3y-Gsh"/>
+                        <outlet property="btnDelete" destination="GcA-aw-KPI" id="VN6-p5-8VF"/>
+                        <outlet property="btnDiv" destination="fP0-PH-kgP" id="VXL-aa-bm2"/>
+                        <outlet property="btnDog" destination="ihw-YI-UqY" id="8fu-Fw-J9e"/>
+                        <outlet property="btnDot" destination="Lg2-7u-0HC" id="5JF-cM-vdn"/>
+                        <outlet property="btnEqual" destination="HSJ-Jv-xw6" id="M5U-vv-HbO"/>
+                        <outlet property="btnHuman" destination="2Jr-uG-Rlz" id="Eem-VB-5hq"/>
+                        <outlet property="btnMult" destination="Clq-hF-M3E" id="qe3-gh-fJR"/>
+                        <outlet property="btnSub" destination="4pR-r2-TFb" id="xVo-RQ-yCW"/>
+                        <outlet property="lblHistory" destination="N5b-V3-niu" id="bMP-3k-M0S"/>
+                        <outlet property="lblOutput" destination="lMR-Ns-3y9" id="BIP-23-vVj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vwS-En-NBS" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="788" y="127.28635682158921"/>
+        </scene>
+        <!--About-->
+        <scene sceneID="AQx-4A-7y9">
+            <objects>
+                <tableViewController storyboardIdentifier="AboutView" id="2hT-yA-Spg" customClass="AboutViewController" customModule="DogYears" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="lUb-mR-PlY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <sections>
+                            <tableViewSection id="SS7-v8-Yb3" userLabel="Name &amp; Version">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="92" id="4Uy-bh-2vu" userLabel="Name &amp; Version">
+                                        <rect key="frame" x="0.0" y="35" width="375" height="92"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4Uy-bh-2vu" id="YL3-rQ-Uia">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="92"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DogYears" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ymt-Hu-1WE">
+                                                    <rect key="frame" x="101.5" y="8" width="172.5" height="51"/>
+                                                    <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="40"/>
+                                                    <color key="textColor" red="0.1764705882" green="0.20784313730000001" blue="0.5568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <color key="shadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <size key="shadowOffset" width="1" height="1"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="vLA-kS-fQZ" userLabel="Version">
+                                                    <rect key="frame" x="166.5" y="64" width="42.5" height="14.5"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="vLA-kS-fQZ" firstAttribute="top" secondItem="Ymt-Hu-1WE" secondAttribute="bottom" constant="5" id="4HC-ck-nGD"/>
+                                                <constraint firstItem="Ymt-Hu-1WE" firstAttribute="leading" secondItem="vLA-kS-fQZ" secondAttribute="leading" id="8fg-Bo-gwy"/>
+                                                <constraint firstItem="vLA-kS-fQZ" firstAttribute="trailing" secondItem="Ymt-Hu-1WE" secondAttribute="trailing" id="9u9-kO-GvR"/>
+                                                <constraint firstItem="Ymt-Hu-1WE" firstAttribute="top" secondItem="YL3-rQ-Uia" secondAttribute="top" constant="8" id="ILa-3k-tDS"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="vLA-kS-fQZ" secondAttribute="bottom" constant="8" id="Pp0-Sj-Z6u"/>
+                                                <constraint firstAttribute="centerX" secondItem="Ymt-Hu-1WE" secondAttribute="centerX" id="RhU-kY-2ND"/>
+                                                <constraint firstAttribute="centerX" secondItem="vLA-kS-fQZ" secondAttribute="centerX" id="vCW-ZY-lcR"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="8fg-Bo-gwy"/>
+                                                    <exclude reference="9u9-kO-GvR"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Feedback" id="d85-cZ-jhL">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="IK3-5b-Juh" userLabel="Feedback">
+                                        <rect key="frame" x="0.0" y="175" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IK3-5b-Juh" id="6K3-F2-3ky">
+                                            <rect key="frame" x="0.0" y="0.0" width="341" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IfI-7l-8eW">
+                                                    <rect key="frame" x="16" y="7" width="317" height="30"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                    <state key="normal" title="Bugs and Feature Requests">
+                                                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="feedback" destination="2hT-yA-Spg" eventType="touchUpInside" id="5pF-qT-I4O"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="IfI-7l-8eW" secondAttribute="trailing" constant="8" id="5TA-lN-vt1"/>
+                                                <constraint firstAttribute="bottom" secondItem="IfI-7l-8eW" secondAttribute="bottom" constant="7" id="G3C-sa-sol"/>
+                                                <constraint firstItem="IfI-7l-8eW" firstAttribute="leading" secondItem="6K3-F2-3ky" secondAttribute="leading" constant="16" id="GvN-k9-mwp"/>
+                                                <constraint firstItem="IfI-7l-8eW" firstAttribute="top" secondItem="6K3-F2-3ky" secondAttribute="top" constant="7" id="tCO-67-Jzv"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="MYK-hS-gWG" userLabel="Rate">
+                                        <rect key="frame" x="0.0" y="219" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MYK-hS-gWG" id="lSw-d4-eH8">
+                                            <rect key="frame" x="0.0" y="0.0" width="341" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ztH-Cs-4YA">
+                                                    <rect key="frame" x="16" y="7" width="317" height="30"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                    <state key="normal" title="Rate Us On the App Store">
+                                                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="rate" destination="2hT-yA-Spg" eventType="touchUpInside" id="pdC-Eh-Npo"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ztH-Cs-4YA" firstAttribute="leading" secondItem="lSw-d4-eH8" secondAttribute="leading" constant="16" id="IrS-2K-t9E"/>
+                                                <constraint firstAttribute="bottom" secondItem="ztH-Cs-4YA" secondAttribute="bottom" constant="7" id="ZVT-xP-qFA"/>
+                                                <constraint firstAttribute="trailing" secondItem="ztH-Cs-4YA" secondAttribute="trailing" constant="8" id="hzy-Wf-AiR"/>
+                                                <constraint firstItem="ztH-Cs-4YA" firstAttribute="top" secondItem="lSw-d4-eH8" secondAttribute="top" constant="7" id="q6L-1u-cGz"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Ray Wenderlich" id="0mw-oo-UQP">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="mqA-SR-rDA" userLabel="Visit Website">
+                                        <rect key="frame" x="0.0" y="311" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mqA-SR-rDA" id="yk7-HK-P1b">
+                                            <rect key="frame" x="0.0" y="0.0" width="341" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hiu-3T-c3q">
+                                                    <rect key="frame" x="16" y="7" width="317" height="30"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                    <state key="normal" title="Visit Our Website">
+                                                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="visitOurSite" destination="2hT-yA-Spg" eventType="touchUpInside" id="p1N-QV-KHE"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="hiu-3T-c3q" firstAttribute="top" secondItem="yk7-HK-P1b" secondAttribute="top" constant="7" id="C5T-x3-hdY"/>
+                                                <constraint firstAttribute="trailing" secondItem="hiu-3T-c3q" secondAttribute="trailing" constant="8" id="EWN-ul-D5j"/>
+                                                <constraint firstAttribute="bottom" secondItem="hiu-3T-c3q" secondAttribute="bottom" constant="7" id="dzJ-Qt-Iol"/>
+                                                <constraint firstItem="hiu-3T-c3q" firstAttribute="leading" secondItem="yk7-HK-P1b" secondAttribute="leading" constant="16" id="qph-Jo-XAK"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="az1-8Z-myY" userLabel="Follow On Twitter">
+                                        <rect key="frame" x="0.0" y="355" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="az1-8Z-myY" id="1VX-hr-wIL">
+                                            <rect key="frame" x="0.0" y="0.0" width="341" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4NI-nc-zZC">
+                                                    <rect key="frame" x="16" y="7" width="317" height="30"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                    <state key="normal" title="Follow Us On Twitter">
+                                                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="followOnTwitter" destination="2hT-yA-Spg" eventType="touchUpInside" id="0Yq-J7-REw"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="4NI-nc-zZC" secondAttribute="trailing" constant="8" id="56H-V8-bB6"/>
+                                                <constraint firstItem="4NI-nc-zZC" firstAttribute="top" secondItem="1VX-hr-wIL" secondAttribute="top" constant="7" id="Cj6-gl-suZ"/>
+                                                <constraint firstItem="4NI-nc-zZC" firstAttribute="leading" secondItem="1VX-hr-wIL" secondAttribute="leading" constant="16" id="YOg-ma-J6k"/>
+                                                <constraint firstAttribute="bottom" secondItem="4NI-nc-zZC" secondAttribute="bottom" constant="7" id="lrk-T4-Qpu"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="2hT-yA-Spg" id="ueC-zB-2dy"/>
+                            <outlet property="delegate" destination="2hT-yA-Spg" id="qJf-Ct-7sm"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="About" id="erH-Z3-kM0"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="lblVersion" destination="vLA-kS-fQZ" id="O0V-gV-eJa"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fDs-53-2ul" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="788" y="811"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Unchecked" width="22" height="22"/>
+        <image name="cat" width="44" height="44"/>
+        <image name="chicken" width="44" height="44"/>
+        <image name="dog" width="44" height="44"/>
+        <image name="human" width="44" height="44"/>
+    </resources>
+</document>
